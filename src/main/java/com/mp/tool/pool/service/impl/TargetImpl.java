@@ -3,6 +3,8 @@ package com.mp.tool.pool.service.impl;
 import com.mp.tool.pool.service.AbsTarget;
 import com.mp.tool.pool.service.AbsTargetPool;
 import com.mp.tool.pool.service.ITarget;
+import com.mp.tool.pool.service.ITargetPool;
+
 import java.util.Date;
 import java.util.UUID;
 
@@ -13,7 +15,7 @@ public class TargetImpl<T> extends AbsTarget<T> {
         return this.getTargetObj();
     }
 
-    public TargetImpl(AbsTargetPool<ITarget> pool,Class<T> tClass) throws Throwable {
+    public TargetImpl(ITargetPool<ITarget> pool, Class<T> tClass) throws Throwable {
         this.setTargetId(UUID.randomUUID().toString().replace("-", ""));
         System.out.println("创建新对象 ID:"+this.getTargetId());
         this.setTargetPool(pool);

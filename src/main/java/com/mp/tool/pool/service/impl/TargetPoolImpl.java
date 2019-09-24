@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-public class TargetPoolImpl<T extends ITarget> extends AbsTargetPool<ITarget> {
+    public class TargetPoolImpl<T extends ITarget> extends AbsTargetPool<ITarget> {
     private Class c;
 
     @Override
